@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/we1"
+            android:text="To Do for Today"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:fontFamily="@string/abc_action_bar_home_description"
+            android:textColor="@color/grey_800"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No ToDos for Today. ENJOY!!"
+            android:textColor="@color/red_A400"
+            android:id="@+id/quote"
+            android:textSize="35dp"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/we1"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/todo"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/quote"
+            android:textAlignment="center"
+            android:hint="Set a new ToDo for today"
+            android:textColorHint="@color/red_A100"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Todo"
+            android:id="@+id/button2"
+            android:theme="@style/Skip"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/red_A700"
+            android:layout_below="@+id/todo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESET TODO"
+            android:id="@+id/button3"
+            android:theme="@style/Skip"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/red_A700"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

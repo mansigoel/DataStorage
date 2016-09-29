@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mansi.datastorage">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Database" android:configChanges="orientation|screenSize|keyboardHidden" android:label="SQLite Database">
+        </activity>
+
+        <activity android:name=".SharedPref" android:configChanges="orientation|screenSize|keyboardHidden" android:label="Shared Preferences">
+        </activity>
+
+        <activity android:name=".WriteFiles" android:configChanges="orientation|screenSize|keyboardHidden" android:label="Writing Files">
+        </activity>
+
+    </application>
+
+</manifest>
