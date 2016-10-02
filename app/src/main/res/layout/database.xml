@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    android:layout_height="fill_parent">
 
-</LinearLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/we1"
+            android:text="Student Records"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:fontFamily="@string/abc_action_bar_home_description"
+            android:textColor="@color/grey_800"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/todo"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:hint="Roll Number"
+            android:textColorHint="@color/blue_A100"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/we1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Record"
+            android:id="@+id/button2"
+            android:theme="@style/Yes"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/red_A700"
+            android:layout_below="@+id/editText3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE RECORD"
+            android:id="@+id/button3"
+            android:theme="@style/Yes"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/red_A700"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:hint="Name"
+            android:textColorHint="@color/blue_A100"
+            android:layout_below="@+id/todo"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:hint="Stream"
+            android:textColorHint="@color/blue_A100"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText3"
+            android:hint="CGPA"
+            android:textColorHint="@color/blue_A100"
+            android:layout_below="@+id/editText2"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHOW RECORD"
+            android:id="@+id/button4"
+            android:theme="@style/Yes"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/red_A700"
+            android:layout_below="@+id/button3"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELETE RECORD"
+            android:id="@+id/button7"
+            android:theme="@style/Yes"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/red_A700"
+            android:layout_below="@+id/button4"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</ScrollView>
