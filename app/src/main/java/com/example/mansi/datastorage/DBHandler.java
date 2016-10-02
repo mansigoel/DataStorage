@@ -12,22 +12,22 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.hardware.camera2.params.StreamConfigurationMap;
 
 public class DBHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "studentRecords";
     private static final String TABLE_RECORDS = "records";
     private static final String KEY_ID = "id";
     private static final String KEY_ROLL = "roll";
     private static final String KEY_NAME = "name";
     private static final String KEY_STREAM = "stream";
-    private static final String KEY_CGPA = "cgpa";
+    private static final String KEY_CGPA = "_cgpa";
     public DBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_RECORDS_TABLE = "CREATE TABLE " + TABLE_RECORDS + "("
-        + KEY_ROLL + " TEXT PRIMARY KEY" + KEY_NAME + " TEXT,"
-        + KEY_STREAM + " TEXT," + KEY_CGPA + "TEXT" + ")";
+        + KEY_ROLL + " TEXT PRIMARY KEY," + KEY_NAME + " TEXT,"
+        + KEY_STREAM + " TEXT," + KEY_CGPA + " TEXT" + ")";
         db.execSQL(CREATE_RECORDS_TABLE);
     }
     @Override
@@ -49,9 +49,8 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public Records getRecord(String roll) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_RECORDS, new String[] { KEY_ROLL,
-                        KEY_NAME, KEY_STREAM, KEY_CGPA}, KEY_ROLL + "=?",
-                new String[] { roll }, null, null, null, null);
+        String[] columns = new String[]{KEY_ROLL,KEY_NAME,KEY_STREAM,KEY_CGPA};
+        Cursor cursor = db.query(TABLE_RECORDS, columns, KEY_ROLL + "="+roll, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
         Records record = new Records(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
@@ -64,9 +63,9 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(KEY_CGPA, record.getCgpa());
         values.put(KEY_NAME, record.getName());
         values.put(KEY_STREAM, record.getStream());
-        return db.update(TABLE_RECORDS, values, KEY_ROLL + " = ?",
-                new String[]{String.valueOf(record.getRoll())});
+        return db.update(TABLE_RECORDS, values, KEY_ROLL + " = " + record.getRoll(),null);
     }
+
 
     public void deleteRecord(Records record) {
         SQLiteDatabase db = this.getWritableDatabase();

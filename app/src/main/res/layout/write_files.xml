@@ -19,17 +19,16 @@
             android:gravity="center"
             android:textSize="25dp"
             android:fontFamily="@string/abc_action_bar_home_description"
-            android:textColor="@color/grey_800"
+            android:textColor="@color/yellow_900"
             android:layout_marginTop="40dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
-
-
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/todo"
+            android:textColor="@color/orange_A400"
             android:layout_marginTop="50dp"
             android:layout_below="@+id/we1"
             android:textAlignment="center"
@@ -88,6 +87,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Internal Storage"
+            android:paddingRight="15dp"
+            android:textSize="15dp"
+            android:textColor="@color/light_green_A700"
             android:id="@+id/textView2"
             android:layout_alignBaseline="@+id/button2"
             android:layout_alignBottom="@+id/button2"
@@ -98,6 +100,9 @@
             android:layout_height="wrap_content"
             android:text="External Storage"
             android:id="@+id/textView"
+            android:textSize="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/light_green_A700"
             android:layout_alignBaseline="@+id/button3"
             android:layout_alignBottom="@+id/button3"
             android:layout_toStartOf="@+id/button3" />
@@ -114,7 +119,6 @@
             android:layout_below="@+id/button3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"/>
-
 
     </RelativeLayout>
 

@@ -18,4 +18,10 @@
         <item name="colorButtonNormal">@color/blue_grey_200</item>
     </style>
 
+    <style name="Skip1" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/deep_purple_A100</item>
+        <item name="colorButtonNormal">@color/deep_purple_A700</item>
+    </style>
+
+
 </resources>
